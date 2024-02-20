@@ -1,0 +1,116 @@
+:root{
+    --black:#1e1e1e;
+    --yellow:#fbbb02;
+    --hoveryellow: #fb9e00;
+    --orange:#e65003;
+}
+
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+html{
+    background: linear-gradient(135deg,var(--yellow), white);
+    height: 100%;
+}
+h1{
+    text-align: center;
+    color:var(--black);
+}
+#cars{
+    display:flex;
+    width: 100%;
+    justify-content:center ;
+    
+}
+section{
+    width:33%; 
+    padding:1.5%;
+}
+.car{
+ 
+   transition: all 0.5s ease-in-out;
+   display: flex;
+   justify-content: center;
+   
+}
+
+
+figure{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.car figcaption{
+    width:100%;
+    text-align: center;
+    color:var(--black);
+    font-weight:bold;
+    font-size:2vw;
+    overflow-x:hidden;
+}
+a{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+
+.car:hover{
+    margin:1.5% 0%;
+    background: linear-gradient(135deg, white, var(--yellow));
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+
+.exp{
+    text-align: center;
+    font-weight:550;
+    color:var(--black);
+    margin-bottom: 0;
+}
+@media(max-width: 500px){
+    *{
+        overflow-y: auto;
+    }
+    #cars{
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+    }
+    .car figcaption{
+        font-size: 5vw;
+    }
+    .car:hover{
+        transform: scale(1);
+        background: linear-gradient(0deg, var(--yellow), white);
+
+    }
+    html{
+        background: linear-gradient(180deg,var(--yellow),white);
+        padding-bottom:0;
+    }
+}
+#btn{
+    background-color: var(--hoveryellow);
+    text-align: center;
+    margin:2px auto 0;
+    display:block;
+    padding:0 1.5%;
+    font-weight: bold;
+    font-size:1.8vw;
+    cursor:pointer;
+    border-radius: 20%;
+    border:1.5px solid;
+    color:var(--black);
+    width:10%;
+}
+
+
+#btn:hover{
+   transform: scale(1.1);
+   overflow-y: hidden;
+}

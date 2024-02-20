@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Car</title>
+    <link rel="stylesheet" href="yourcar.css">
+    <link rel="shortcut icon" type="x-icon" href="Pics/logo.png">
+    <script src="yourcar.js"></script>
+</head>
+<body>
+    <h1>Sign up and find out which car fits you best</h1>
+    <h3>You will recieve your answer via e-mail as well</h3>
+    <fieldset>
+        <legend>Complete the form below:</legend>
+    <form id="form" action="" method="POST" onsubmit=" nr() ">
+      <label for="emri">First Name:</label>
+      <input type="text" id="emri" placeholder="Aldo" autofocus name="emri" required autocomplete="first name" oninvalid="setCustomValidity('Must start with an uppercase letter and contain at least 1 other lowercase letter')" oninput="setCustomValidity('')"><br>
+      <label for="mbiemri">Last Name:</label>
+      <input type="text" name="mbiemri" placeholder="Pura" id="mbiemri" required autocomplete="last name" oninvalid="setCustomValidity('Must start with an uppercase letter and contain at least 1 other lowercase letter')" oninput="setCustomValidity('')"><br>
+      <label for="dtl">Birthday</label>
+      <input type="date" name="dtl" id="dtl" required autocomplete="bday"><br>
+      <label for="mosha">Age</label>
+      <input type="number" name="mosha" autocomplete="age" min="18" max="120" id="mosha" required placeholder="18"><br>
+      <label for="email">E-mail:</label>
+      <input type="text" name="email" placeholder="aldopura@example.com"  id="email" required autocomplete="e-mail" oninvalid="setCustomValidity('Must start with a letter, contain \'@\', \'.\' and at least 2 letters after the symbols')" oninput="setCustomValidity('')"><br>
+      <label for="pass">Password:</label>
+      <input type="password" placeholder="Choose your password" id="pass" name="pass" required oninvalid="setCustomValidity('Must contain at least 8 characters')" oninput="setCustomValidity('')"><br>
+      <label for="cpass">Confirm Password:</label>
+      <input type="password" name="cpass" placeholder="Confirm your password" id="cpass" required oninvalid="setCustomValidity('Must match your password')" oninput="setCustomValidity('')"><br>
+      <label for="gjinia">Gender:</label>
+      <input type="radio" name="gjinia[]" id="male">Male
+      <input type="radio" name="gjinia[]" id="female">Female
+      <input type="radio" name="gjinia[]" id="other">Other<br>
+      <label for="njohuri">You prefer:</label> 
+      <input type="checkbox" name="njohuri[]" id="lux">Luxury
+      <input type="checkbox" name="njohuri[]" id="sport">Sport<br>
+      <label for="tel">Mobile:</label>
+      <input type="text" name="tel" placeholder="XXX-XXXXXXX" id="tel" required autocomplete="mobile" oninvalid="setCustomValidity('Must start with \'06\', continue with 7,8 or 9, \'-\' and 7 other digits')" oninput="setCustomValidity('')"><br>  
+      <label for="car">What car you own?</label>
+      <select id="car" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="a4">A4</option>
+        <option value="a6">A6</option>
+        <option value="a8">A8</option>
+        <option value="3series">3 series</option>
+        <option value="5series">5 series</option>
+        <option value="7series">7 series</option>
+        <option value="c">C Class</option>
+        <option value="e">E Class</option>
+        <option value="s">S Class</option>
+      </select><br>
+      <label for="files" id="drop_zone">Drop files here:</label>
+      <input type="file" id="files" name="files[]" multiple />
+  <!-- <div id="drop_zone">
+   Drop files here
+  </div>  -->
+
+  <output id="list"></output><br>
+      <div id="btn">
+        <input type="submit" name="btn" value="Submit" class="btn" onclick="llogarit(), radios(), checkboxes()">    
+        <input type="reset" value="Reset" id="reset" class="btn">
+      </div>
+      <a id="linku" href=""></a>
+      <audio id="audio" controls src="Pics/Cheer.mp3"></audio>
+    </form>
+</fieldset>
+
+      <div class="modal">
+        <figure class="modal-content">
+          <figcaption id="close" onclick="hiq()">&times;</figcaption>
+          <img src="Pics/Congratulations.jpg" alt="Congratulations picture" class="modal-image">
+        </figure>
+      </div>
+
+</body>
+</html>

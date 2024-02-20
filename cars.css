@@ -1,0 +1,119 @@
+:root{
+    --black:#1e1e1e;
+    --yellow:#fbbb02;
+    --hoveryellow: #fb9e00;
+    --orange:#e65003;
+}
+
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+html{
+    background: linear-gradient(135deg,var(--yellow),white);
+    height: 100%;
+}
+h1{
+    text-align: center;
+    color:var(--black);
+    margin:0 auto;
+}
+#cars{
+    display:flex;
+    width: 100%;
+    justify-content:center ;
+    
+}
+section{
+    width:33%; 
+    padding:1.5%;
+}
+.car{
+ 
+   transition: all 0.5s ease-in-out;
+   display: flex;
+   justify-content: center;
+   
+}
+
+
+figure{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.car figcaption{
+    width:100%;
+    text-align: center;
+    color:var(--black);
+    font-weight:bold;
+    font-size:2vw;
+    overflow-x:hidden;
+}
+a{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+
+.car:hover{
+    margin:1.5% 0%;
+    background: linear-gradient(135deg,white,var(--yellow));
+    border-radius: 15%;
+    transform:rotateX(20deg);
+    transform:rotateY(20deg);
+    transform:rotateZ(-5deg);
+}
+
+
+.exp{
+    text-align: center;
+    font-weight:550;
+    color:var(--black);
+    margin-bottom: 0;
+}
+@media(max-width: 600px){
+    *{
+        overflow-y: auto;
+    }
+    #cars{
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+    }
+    .car figcaption{
+        font-size: 5vw;
+    }
+    .car:hover{
+        transform: scale(1);
+    }
+    html{
+        background: linear-gradient(90deg,var(--yellow),white);
+        padding-bottom: 0;}
+    #btn{
+        font-size:500px;
+    }    
+
+}
+#btn{
+    background-color: var(--hoveryellow);
+    text-align: center;
+    margin:2px auto 0;
+    display:block;
+    padding:0 1.5%;
+    font-weight: bold;
+    font-size:1.8vw;
+    cursor:pointer;
+    border-radius: 20%;
+    border:1.5px solid;
+    color:var(--black);
+    width:10%;
+}
+
+
+#btn:hover{
+   transform: scale(1.1);
+   overflow-y: hidden;
+}
